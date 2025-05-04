@@ -1,6 +1,13 @@
 #title_bar {
-    background-color: #525252; /* Green */
+    background-color:linear-gradient(rgb(121, 75, 206), rgb(176, 104, 209));
     color: white;
-    padding: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+#bottom_bar {
+    background-color: #525252;
+    color: white;
+    padding: 10px;
     text-align: center;
 }
