@@ -5,6 +5,12 @@
     text-align: center;
 }
 
+#logo {
+    width: 50px;
+    height: 50px;
+    vertical-align: left;
+}
+
 #bottom_bar {
     background-color: #525252;
     color: white;
