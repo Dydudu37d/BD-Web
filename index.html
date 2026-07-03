@@ -2,21 +2,53 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>北斗工作室-官網</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>NeuroSamaOS</title>
+    <style>
+      body{
+        font-family: 'Ubuntu Mono', monospace;
+        line-height: 175%;
+        font-size: 18px;
+        background-color: rgb(245, 224, 255);
+        padding: 10px;
+      }
+      button {
+        float: middle;
+        transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        background-color: rgb(255, 255, 255);
+        border-width: medium;
+        border-color: rgb(255, 164, 250);
+        padding: 10px;
+        font-size: 20px;
+        font-style: italic;
+      }
+      #container {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: solid;
+        border-width: medium;
+        border-color: gold;
+        padding: 20px;
+        background-color: #c5fffa;
+        line-height: 175%;
+        font-size: 18px;
+      }
+    </style>
   </head>
-  <body>
-    <div id="title_bar">
-      <h1><img src="/823d587e0ef53d6916d8369d9e83d9a1.jpg" alt="logo" id="logo">BD工作室-官網</h1>
-      <button id="menu_button" onclick="location.href='index.html'">首頁</button>
-      <button id="menu_button" onclick="location.href='about.html'">關於我們</button>
-      <button id="menu_button" onclick="location.href='app.html'">應用</button>
-    </div>
-    <div id="bottom_bar">
-      <p>北斗工作室-官網</p>
-      <p>聯絡我們:
-        <p>QQ:952067943</p>
-      </p>
-    </div>
+  <body sytle="text-align: center">
+      <div id="container" style="text-align: center">
+        <img src="NeuroSamaOSLogo.png" alt="NeuroSamaOS">
+        <div>
+          <a style="text-decoration: none;">
+            <button type="button">
+              Download NeuroSama Operating System,64bit UEFI.
+            </button>
+          </a>
+        </div>
+      </div>
   </body>
 </html>
