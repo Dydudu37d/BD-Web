@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <base href="./">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>NeuroSamaOS: FishC</title>
+    <style>
+      body{
+        font-family: 'Ubuntu Mono', monospace;
+        font-size: 18px;
+        background-color: rgb(245, 224, 255);
+        padding: 10px;
+      }
+      button {
+        float: middle;
+        transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        background-color: rgb(255, 255, 255);
+        border-width: medium;
+        border-color: rgb(255, 164, 250);
+        padding: 10px;
+        font-size: 20px;
+        font-style: italic;
+      }
+      #container {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: solid;
+        border-width: medium;
+        border-color: gold;
+        padding: 20px;
+        background-color: #c5fffa;
+        font-size: 18px;
+      }
+      p { 
+        line-height: 0; 
+        padding: 0px;
+        float: middle;
+        font-family: 'Ubuntu Mono', monospace;
+      }
+      #class{
+        line-height: 0;
+        color: blueviolet;
+      }
+      #v{
+        line-height: 0;
+        color: rgb(212, 212, 14);
+      }
+      #block{
+        line-height: 0;
+        color: rgb(175, 175, 175);
+      }
+      #code{
+        padding: 0px;
+        line-height: 1;
+        background-color: rgb(255, 255, 255);
+        font-family: 'Ubuntu Mono', monospace;
+      }
+      #func{
+        line-height: 0;
+        color: rgb(34, 174, 255);
+      }
+      #type{
+        line-height: 0;
+        color: rgb(255, 0, 0);
+      }
+      #Define{
+        line-height: 0;
+        color: rgb(0, 54, 202);
+      }
+      #int{
+        line-height: 0;
+        color: rgb(209, 143, 1);
+      }
+      #char{
+        line-height: 0;
+        color: rgb(111, 241, 99);
+      }
+      #commit{
+        line-height: 0;
+        color: rgb(185, 185, 185);
+      }
+      div{
+        padding: 0px;
+        line-height: 0;
+      }
+    </style>
+  </head>
+  <body stylee="text-align: left">
+      <div id="container" style="text-align: left">
+        <a href="index.html" >Go Back</a>
+        <p>FishC-JIT</p>
+        <br>
+        <p>Types:</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">u8</span>,<span id="type">u16</span>,<span id="type">u32</span>,<span id="type">u64</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">s8</span>,<span id="type">s16</span>,<span id="type">s32</span>,<span id="type">s64</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">bool</span>,<span id="type">u0</span>,<span id="type">f32</span>,<span id="type">f64</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">FP8</span>,<span id="type">FP16</span>,<span id="type">FP32</span>,<span id="type">FP64</span>,</p>
+        <p>SIMD Types:</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">u128</span>,<span id="type">s128</span>,<span id="type">u256</span>,<span id="type">s256</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">u64x2</span>,<span id="type">s64x2</span>,<span id="type">u32x4</span>,<span id="type">s32x4</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">u16x8</span>,<span id="type">s16x8</span>,<span id="type">u8x16</span>,<span id="type">s8x26</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">u64x4</span>,<span id="type">s64x4</span>,<span id="type">u32x8</span>,<span id="type">s32x8</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">u16x16</span>,<span id="type">s16x16</span>,<span id="type">u8x32</span>,<span id="type">s8x32</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">f64x2</span>,<span id="type">f32x4</span>,<span id="type">f64x4</span>,<span id="type">f32x8</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">FP64x2</span>,<span id="type">FP32x4</span>,<span id="type">FP64x4</span>,<span id="type">FP32x8</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">FP16x8</span>,<span id="type">FP8x16</span>,<span id="type">FP16x16</span>,<span id="type">FP8x32</span></p>
+        <p>Typedef:</p>
+        <p>&emsp;&emsp;&emsp;<span id="class">Typedef</span>,<span id="class">LANG_TYPEDEF</span></p>
+        <p>Class:</p>
+<pre id="code">
+FishC:
+&emsp;&emsp;&emsp;<span id="class">class </span><span id="block">{</span>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="type">u8</span> <span id="v">X</span>,<span id="v">Y</span>,<span id="v">Z</span>;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="type">u0</span> (*<span id="v">Draw</span>)(<span id="type">u0</span>);
+&emsp;&emsp;&emsp;<span id="block">} <span id="v">Pos</span>;</span>
+
+</pre>
+      <p>Define:</p>
+<pre id="code">
+FishC:
+&emsp;&emsp;&emsp;<span id="Define">#define ReLU(<span id="v">x</span>) (When <span id="v">x</span>><span id="int">0</span> Then <span id="v">x</span> Else <span id="int">0</span>) </span>
+
+</pre>
+      <p>Array:</p>
+<pre id="code">
+FishC:
+&emsp;&emsp;&emsp;<span id="type">u8</span> <span id="v">Array1</span>[]=<span id="block">{</span><span id="v">Idx</span> <span id="class">for</span> (<span id="type">u16</span> <span id="v">Idx</span>&lt;<span id="int">256</span>=<span id="int">0</span>;<span id="v">Idx</span>++)<span id="block">}</span>;
+
+</pre>
+      <p>Loop "For":</p>
+<pre id="code">
+FishC:
+&emsp;&emsp;&emsp;<span id="class">for</span> (<span id="type">u16</span> <span id="v">Idx</span>&lt;<span id="int">256</span>=<span id="int">0</span>;<span id="v">Idx</span>++)<span id="block">{</span>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="func">Print</span>(<span id="char">"%dS"</span>,<span id="v">Idx</span>);
+&emsp;&emsp;&emsp;<span id="block">}</span>
+
+</pre>
+      <p>Loop "While":</p>
+<pre id="code">
+FishC:
+&emsp;&emsp;&emsp;<span id="type">f64</span> <span id="v">GoldenRatio</span>=<span id="int">2.0f</span>;
+&emsp;&emsp;&emsp;<span id="class">while</span> (<span id="int">1</span>)<span id="block">{</span>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="v">GoldenRatio</span>=((<span id="int">1.0f</span>/<span id="v">GoldenRatio</span>)+<span id="int">1</span>);
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="func">Print</span>(<span id="char">"%fLL\n"</span>,<span id="v">GoldenRatio</span>);
+&emsp;&emsp;&emsp;<span id="block">}</span>
+
+</pre>
+      <p>If:</p>
+<pre id="code">
+FishC:
+&emsp;&emsp;&emsp;<span id="type">f64</span> <span id="v">GoldenRatio</span>=<span id="int">2.0f</span>;
+&emsp;&emsp;&emsp;<span id="class">if</span> (<span id="int">0.1</span>+<span id="int">0.2</span>==<span id="int">0.3</span>)<span id="block">{</span>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="v">GoldenRatio</span>=((<span id="int">1.0f</span>/<span id="v">GoldenRatio</span>)+<span id="int">1</span>);
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="func">Print</span>(<span id="char">"%fLL\n"</span>,<span id="v">GoldenRatio</span>);
+&emsp;&emsp;&emsp;<span id="block">}</span>
+
+</pre>
+      <p style="color: red;">No switch case.</p><br>
+      <p>Print:</p>
+      <p>&emsp;&emsp;&emsp;<span id="char">%u(x)</span> <span id="commit">// Unsigned Integer (x)=Type</span></p>
+      <p>&emsp;&emsp;&emsp;<span id="char">%d(x)</span> <span id="commit">// Signed Integer (x)=Type</span></p>
+      <p>&emsp;&emsp;&emsp;<span id="char">%f(x)</span> <span id="commit">// Float (x)=Type</span></p>
+      <p>Print Type:</p>
+      <p>&emsp;&emsp;&emsp;C: Char</p>
+      <p>&emsp;&emsp;&emsp;S: Short</p>
+      <p>&emsp;&emsp;&emsp;I: Int / L: Long</p>
+      <p>&emsp;&emsp;&emsp;LL: Long Long</p>
+
+      <p>&emsp;&emsp;&emsp;<span id="char">%u(x)</span>: C, S, I / L, LL</p>
+      <p>&emsp;&emsp;&emsp;<span id="char">%d(x)</span>: C, S, I / L, LL</p>
+      <p>&emsp;&emsp;&emsp;<span id="char">%f(x)</span>: C, S, I / L, LL</p>
+
+      <p>Bitwise Operation:</p>
+      <p>&emsp;&emsp;&emsp;x&gt;&gt;y:Bitwise shift right</p>
+      <p>&emsp;&emsp;&emsp;x&lt;&lt;y:Bitwise shift left</p>
+      <p>&emsp;&emsp;&emsp;x|y:Bitwise OR</p>
+      <p>&emsp;&emsp;&emsp;x&y:Bitwise AND</p>
+      <p>&emsp;&emsp;&emsp;x^y:Bitwise XOR </p>
+      <p>&emsp;&emsp;&emsp;~x:Bitwise NOT</p>
+      <p>&emsp;&emsp;&emsp;@x:Even bits are set to 1</p>
+      <p>&emsp;&emsp;&emsp;$x:Set odd bits to 1</p>
+      <p>&emsp;&emsp;&emsp;@$x:Reverse even bits</p>
+      <p>&emsp;&emsp;&emsp;$@x:Reverse odd bits</p>
+
+      <p>Logic Operator:</p>
+      <p>&emsp;&emsp;&emsp;x!=y:Not equal to</p>
+      <p>&emsp;&emsp;&emsp;x==y:Qqual to</p>
+      <p>&emsp;&emsp;&emsp;x||y:Logic OR</p>
+      <p>&emsp;&emsp;&emsp;x&&y:Logic AND</p>
+      <p>&emsp;&emsp;&emsp;!x:Logic NOT</p>
+
+      <p>Variable Operator:</p>
+      <p>&emsp;&emsp;&emsp;x=y:Value assignment</p>
+      <p>&emsp;&emsp;&emsp;x&gt;&gt;=y:Bitwise shift right and assign value</p>
+      <p>&emsp;&emsp;&emsp;x&lt;&lt;=y:Bitwise shift left and assign value</p>
+      <p>&emsp;&emsp;&emsp;x*=y:Multiply and assign value</p>
+      <p>&emsp;&emsp;&emsp;x/=y:Divide and assign value</p>
+      <p>&emsp;&emsp;&emsp;x^=y:Bitwise XOR and assign value</p>
+      <p>&emsp;&emsp;&emsp;x+=y:ADD and assign value</p>
+      <p>&emsp;&emsp;&emsp;x-=y:SUB and assign value</p>
+      <p>&emsp;&emsp;&emsp;x|=y:Bitwise OR and assign value</p>
+      <p>&emsp;&emsp;&emsp;x&=y:Bitwise AND and assign value</p>
+      <p>&emsp;&emsp;&emsp;x@:Even bits are set to 1 and assign value</p>
+      <p>&emsp;&emsp;&emsp;x$:Set odd bits to 1 and assign value</p>
+      <p>&emsp;&emsp;&emsp;x@$:Reverse even bits and assign value</p>
+      <p>&emsp;&emsp;&emsp;x$@:Reverse odd bits and assign value</p>
+
+      <p>Math Operator:</p>
+      <p>&emsp;&emsp;&emsp;x/y:Divide</p>
+      <p>&emsp;&emsp;&emsp;x+y:Add</p>
+      <p>&emsp;&emsp;&emsp;x-y:Sub</p>
+      <p>&emsp;&emsp;&emsp;x*y:Multiply</p>
+      <p>&emsp;&emsp;&emsp;x%y:x/y R2</p>
+
+      <p>Pointer&Dereference Symbol:*</p>
+      <p>Quote Symbol:&</p>
+
+      <p>Pointer & Dereference:</p>
+<pre id="code">
+FishC:
+    &emsp;&emsp;&emsp;<span id="type">u8</span> <span id="v">Value</span> = <span id="int">42</span>;
+    &emsp;&emsp;&emsp;<span id="type">u8</span>* <span id="v">Ptr</span> = &<span id="v">Value</span>;
+    &emsp;&emsp;&emsp;*<span id="v">Ptr</span> = <span id="int">100</span>;
+    &emsp;&emsp;&emsp;<span id="func">Print</span>(<span id="char">"%dC\n"</span>, <span id="v">Value</span>);
+
+</pre>
+
+      <p>Hello World:</p>
+<pre id="code">
+FishC:
+&emsp;&emsp;&emsp;<span id="char">"Hello World\n"</span>;
+
+</pre>
+      </div>
+  </body>
+</html>
