@@ -220,6 +220,16 @@ FishC:
       <p>Pointer&Dereference Symbol:*</p>
       <p>Quote Symbol:&</p>
 
+      <p>Inline ASM:</p>
+<pre id="code">
+FishC:
+&emsp;&emsp;&emsp;<span id="class">asm</span> <span id="block">{</span>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="class">Push</span><span id="type">B</span> <span id="type">r</span><span id="v">ax</span>;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="class">Pop</span><span id="type">B</span> <span id="type">r</span><span id="v">ax</span>;
+&emsp;&emsp;&emsp;<span id="block">}</span>;
+
+</pre>
+
       <p>Pointer & Dereference:</p>
 <pre id="code">
 FishC:
