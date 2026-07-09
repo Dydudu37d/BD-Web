@@ -100,6 +100,7 @@
         <p>&emsp;&emsp;&emsp;<span id="type">s8</span>,<span id="type">s16</span>,<span id="type">s32</span>,<span id="type">s64</span>,</p>
         <p>&emsp;&emsp;&emsp;<span id="type">bool</span>,<span id="type">u0</span>,<span id="type">f32</span>,<span id="type">f64</span>,</p>
         <p>&emsp;&emsp;&emsp;<span id="type">FP8</span>,<span id="type">FP16</span>,<span id="type">FP32</span>,<span id="type">FP64</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">FP80</span>,<span id="type">f80</span></p>
         <p>SIMD Types:</p>
         <p>&emsp;&emsp;&emsp;<span id="type">u128</span>,<span id="type">s128</span>,<span id="type">u256</span>,<span id="type">s256</span>,</p>
         <p>&emsp;&emsp;&emsp;<span id="type">u64x2</span>,<span id="type">s64x2</span>,<span id="type">u32x4</span>,<span id="type">s32x4</span>,</p>
@@ -153,13 +154,21 @@ FishC:
       <p>If:</p>
 <pre id="code">
 FishC:
-&emsp;&emsp;&emsp;<span id="type">f64</span> <span id="v">GoldenRatio</span>=<span id="int">2.0f</span>;
-&emsp;&emsp;&emsp;<span id="class">if</span> (<span id="int">0.1</span>+<span id="int">0.2</span>==<span id="int">0.3</span>)<span id="block">{</span>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="v">GoldenRatio</span>=((<span id="int">1.0f</span>/<span id="v">GoldenRatio</span>)+<span id="int">1</span>);
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="func">Print</span>(<span id="char">"%fLL\n"</span>,<span id="v">GoldenRatio</span>);
+&emsp;&emsp;&emsp;<span id="class">if</span>(<span id="int">0.1</span>+<span id="int">0.2</span>==<span id="int">0.3</span>)<span id="block">{</span>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="char">"True\n"</span>;
+&emsp;&emsp;&emsp;<span id="block">}</span><span id="class">else</span><span id="block">{</span>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="char">"False\n"</span>;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="class">if</span>((<span id="type">FP64</span>)<span id="int">0.1</span>+(<span id="type">FP64</span>)<span id="int">0.2</span>==(<span id="type">FP64</span>)<span id="int">0.3</span>)<span id="char"> "But If in FP8~FP64 Its True\n"</span>;
 &emsp;&emsp;&emsp;<span id="block">}</span>
 
 </pre>
+<pre id="code">
+Output:
+&emsp;&emsp;&emsp;False
+&emsp;&emsp;&emsp;But If in FP8~FP64 Its True
+
+</pre>
+
       <p style="color: red;">No switch case.</p><br>
       <p>Print:</p>
       <p>&emsp;&emsp;&emsp;<span id="char">%u(x)</span> <span id="commit">// Unsigned Integer (x)=Type</span></p>
@@ -237,10 +246,10 @@ FishC:
       <p>Pointer & Dereference:</p>
 <pre id="code">
 FishC:
-    &emsp;&emsp;&emsp;<span id="type">u8</span> <span id="v">Value</span> = <span id="int">42</span>;
-    &emsp;&emsp;&emsp;<span id="type">u8</span>* <span id="v">Ptr</span> = &<span id="v">Value</span>;
-    &emsp;&emsp;&emsp;*<span id="v">Ptr</span> = <span id="int">100</span>;
-    &emsp;&emsp;&emsp;<span id="func">Print</span>(<span id="char">"%dC\n"</span>, <span id="v">Value</span>);
+&emsp;&emsp;&emsp;<span id="type">u8</span> <span id="v">Value</span> = <span id="int">42</span>;
+&emsp;&emsp;&emsp;<span id="type">u8</span>* <span id="v">Ptr</span> = &<span id="v">Value</span>;
+&emsp;&emsp;&emsp;*<span id="v">Ptr</span> = <span id="int">100</span>;
+&emsp;&emsp;&emsp;<span id="func">Print</span>(<span id="char">"%dC\n"</span>, <span id="v">Value</span>);
 
 </pre>
 
