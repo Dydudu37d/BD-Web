@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <title>NeuroSamaOS: FishC</title>
+    <title>NeuroSamaOS: HolyFish</title>
     <style>
       body{
         font-family: 'Ubuntu Mono', monospace;
@@ -93,7 +93,7 @@
   <body stylee="text-align: left">
       <div id="container" style="text-align: left">
         <a href="index.html" >Go Back</a>
-        <p>FishC-JIT</p>
+        <p>HolyFish-JIT</p>
         <br>
         <p>Types:</p>
         <p>&emsp;&emsp;&emsp;<span id="type">u8</span>,<span id="type">u16</span>,<span id="type">u32</span>,<span id="type">u64</span>,</p>
@@ -114,7 +114,7 @@
         <p>&emsp;&emsp;&emsp;<span id="class">Typedef</span>,<span id="class">LANG_TYPEDEF</span></p>
         <p>Class:</p>
 <pre id="code">
-FishC:
+HolyFish:
 &emsp;&emsp;&emsp;<span id="class">class </span><span id="block">{</span>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="type">u8</span> <span id="v">X</span>,<span id="v">Y</span>,<span id="v">Z</span>;
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="type">u0</span> (*<span id="v">Draw</span>)(<span id="type">u0</span>);
@@ -123,19 +123,19 @@ FishC:
 </pre>
       <p>Define:</p>
 <pre id="code">
-FishC:
+HolyFish:
 &emsp;&emsp;&emsp;<span id="Define">#define ReLU(<span id="v">x</span>) (When <span id="v">x</span>><span id="int">0</span> Then <span id="v">x</span> Else <span id="int">0</span>) </span>
 
 </pre>
       <p>Array:</p>
 <pre id="code">
-FishC:
+HolyFish:
 &emsp;&emsp;&emsp;<span id="type">u8</span> <span id="v">Array1</span>[]=<span id="block">{</span><span id="v">Idx</span> <span id="class">for</span> (<span id="type">u16</span> <span id="v">Idx</span>&lt;<span id="int">256</span>=<span id="int">0</span>;<span id="v">Idx</span>++)<span id="block">}</span>;
 
 </pre>
       <p>Loop "For":</p>
 <pre id="code">
-FishC:
+HolyFish:
 &emsp;&emsp;&emsp;<span id="class">for</span> (<span id="type">u16</span> <span id="v">Idx</span>&lt;<span id="int">256</span>=<span id="int">0</span>;<span id="v">Idx</span>++)<span id="block">{</span>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="func">Print</span>(<span id="char">"%dS"</span>,<span id="v">Idx</span>);
 &emsp;&emsp;&emsp;<span id="block">}</span>
@@ -143,7 +143,7 @@ FishC:
 </pre>
       <p>Loop "While":</p>
 <pre id="code">
-FishC:
+HolyFish:
 &emsp;&emsp;&emsp;<span id="type">f64</span> <span id="v">GoldenRatio</span>=<span id="int">2.0f</span>;
 &emsp;&emsp;&emsp;<span id="class">while</span> (<span id="int">1</span>)<span id="block">{</span>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="v">GoldenRatio</span>=((<span id="int">1.0f</span>/<span id="v">GoldenRatio</span>)+<span id="int">1</span>);
@@ -153,7 +153,7 @@ FishC:
 </pre>
       <p>If:</p>
 <pre id="code">
-FishC:
+HolyFish:
 &emsp;&emsp;&emsp;<span id="class">if</span>(<span id="int">0.1</span>+<span id="int">0.2</span>==<span id="int">0.3</span>)<span id="block">{</span>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="char">"True\n"</span>;
 &emsp;&emsp;&emsp;<span id="block">}</span><span id="class">else</span><span id="block">{</span>
@@ -235,7 +235,7 @@ Output:
       <br>
       <p>Inline ASM:</p>
 <pre id="code">
-FishC:
+HolyFish:
 &emsp;&emsp;&emsp;<span id="class">asm</span> <span id="block">{</span>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="class">Push</span><span id="type">B</span> <span id="type">r</span><span id="v">ax</span>;
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="class">Pop</span><span id="type">B</span> <span id="type">r</span><span id="v">ax</span>;
@@ -245,7 +245,7 @@ FishC:
 
       <p>Pointer & Dereference:</p>
 <pre id="code">
-FishC:
+HolyFish:
 &emsp;&emsp;&emsp;<span id="type">u8</span> <span id="v">Value</span> = <span id="int">42</span>;
 &emsp;&emsp;&emsp;<span id="type">u8</span>* <span id="v">Ptr</span> = &<span id="v">Value</span>;
 &emsp;&emsp;&emsp;*<span id="v">Ptr</span> = <span id="int">100</span>;
@@ -255,7 +255,7 @@ FishC:
 
       <p>Hello World:</p>
 <pre id="code">
-FishC:
+HolyFish:
 &emsp;&emsp;&emsp;<span id="char">"Hello World\n"</span>;
 &emsp;&emsp;&emsp;<span id="func">Print</span>(<span id="char">"Hello World\n"</span>);
 
