@@ -96,18 +96,18 @@
         <p>HolyFish-JIT</p>
         <br>
         <p>Types:</p>
-        <p>&emsp;&emsp;&emsp;<span id="type">u8</span>,<span id="type">u16</span>,<span id="type">u32</span>,<span id="type">u64</span>,</p>
-        <p>&emsp;&emsp;&emsp;<span id="type">s8</span>,<span id="type">s16</span>,<span id="type">s32</span>,<span id="type">s64</span>,</p>
-        <p>&emsp;&emsp;&emsp;<span id="type">bool</span>,<span id="type">u0</span>,<span id="type">f32</span>,<span id="type">f64</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">U8</span>,<span id="type">U16</span>,<span id="type">U32</span>,<span id="type">U64</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">S8</span>,<span id="type">S16</span>,<span id="type">S32</span>,<span id="type">S64</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">Bool</span>,<span id="type">U0</span>,<span id="type">F32</span>,<span id="type">F64</span>,</p>
         <p>&emsp;&emsp;&emsp;<span id="type">FP8</span>,<span id="type">FP16</span>,<span id="type">FP32</span>,<span id="type">FP64</span>,</p>
-        <p>&emsp;&emsp;&emsp;<span id="type">FP80</span>,<span id="type">f80</span></p>
+        <p>&emsp;&emsp;&emsp;<span id="type">FP80</span>,<span id="type">F80</span></p>
         <p>SIMD Types:</p>
-        <p>&emsp;&emsp;&emsp;<span id="type">u128</span>,<span id="type">s128</span>,<span id="type">u256</span>,<span id="type">s256</span>,</p>
-        <p>&emsp;&emsp;&emsp;<span id="type">u64x2</span>,<span id="type">s64x2</span>,<span id="type">u32x4</span>,<span id="type">s32x4</span>,</p>
-        <p>&emsp;&emsp;&emsp;<span id="type">u16x8</span>,<span id="type">s16x8</span>,<span id="type">u8x16</span>,<span id="type">s8x32</span>,</p>
-        <p>&emsp;&emsp;&emsp;<span id="type">u64x4</span>,<span id="type">s64x4</span>,<span id="type">u32x8</span>,<span id="type">s32x8</span>,</p>
-        <p>&emsp;&emsp;&emsp;<span id="type">u16x16</span>,<span id="type">s16x16</span>,<span id="type">u8x32</span>,<span id="type">s8x32</span>,</p>
-        <p>&emsp;&emsp;&emsp;<span id="type">f64x2</span>,<span id="type">f32x4</span>,<span id="type">f64x4</span>,<span id="type">f32x8</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">U128</span>,<span id="type">S128</span>,<span id="type">U256</span>,<span id="type">S256</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">U64x2</span>,<span id="type">S64x2</span>,<span id="type">U32x4</span>,<span id="type">S32x4</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">U16x8</span>,<span id="type">S16x8</span>,<span id="type">U8x16</span>,<span id="type">S8x32</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">U64x4</span>,<span id="type">S64x4</span>,<span id="type">U32x8</span>,<span id="type">S32x8</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">U16x16</span>,<span id="type">S16x16</span>,<span id="type">U8x32</span>,<span id="type">S8x32</span>,</p>
+        <p>&emsp;&emsp;&emsp;<span id="type">F64x2</span>,<span id="type">F32x4</span>,<span id="type">F64x4</span>,<span id="type">F32x8</span>,</p>
         <p>&emsp;&emsp;&emsp;<span id="type">FP64x2</span>,<span id="type">FP32x4</span>,<span id="type">FP64x4</span>,<span id="type">FP32x8</span>,</p>
         <p>&emsp;&emsp;&emsp;<span id="type">FP16x8</span>,<span id="type">FP8x16</span>,<span id="type">FP16x16</span>,<span id="type">FP8x32</span></p>
         <p>Typedef:</p>
@@ -115,28 +115,28 @@
         <p>Class:</p>
 <pre id="code">
 HolyFish:
-&emsp;&emsp;&emsp;<span id="class">class </span><span id="block">{</span>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="type">u8</span> <span id="v">X</span>,<span id="v">Y</span>,<span id="v">Z</span>;
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="type">u0</span> (*<span id="v">Draw</span>)(<span id="type">u0</span>);
+&emsp;&emsp;&emsp;<span id="class">Class </span><span id="block">{</span>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="type">U8</span> <span id="v">X</span>,<span id="v">Y</span>,<span id="v">Z</span>;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="type">U0</span> (*<span id="v">Draw</span>)(<span id="type">U0</span>);
 &emsp;&emsp;&emsp;<span id="block">} <span id="v">Pos</span>;</span>
 
 </pre>
       <p>Define:</p>
 <pre id="code">
 HolyFish:
-&emsp;&emsp;&emsp;<span id="Define">#define ReLU(<span id="v">x</span>) (When <span id="v">x</span>><span id="int">0</span> Then <span id="v">x</span> Else <span id="int">0</span>) </span>
+&emsp;&emsp;&emsp;<span id="Define">#Define ReLU(<span id="v">x</span>) (When <span id="v">x</span>><span id="int">0</span> Then <span id="v">x</span> Else <span id="int">0</span>) </span>
 
 </pre>
       <p>Array:</p>
 <pre id="code">
 HolyFish:
-&emsp;&emsp;&emsp;<span id="type">u8</span> <span id="v">Array1</span>[]=<span id="block">{</span><span id="v">Idx</span> <span id="class">for</span> (<span id="type">u16</span> <span id="v">Idx</span>&lt;<span id="int">256</span>=<span id="int">0</span>;<span id="v">Idx</span>++)<span id="block">}</span>;
+&emsp;&emsp;&emsp;<span id="type">U8</span> <span id="v">Array1</span>[]=<span id="block">{</span><span id="v">Idx</span> <span id="class">For</span> (<span id="type">U16</span> <span id="v">Idx</span>&lt;<span id="int">256</span>=<span id="int">0</span>;<span id="v">Idx</span>++)<span id="block">}</span>;
 
 </pre>
       <p>Loop "For":</p>
 <pre id="code">
 HolyFish:
-&emsp;&emsp;&emsp;<span id="class">for</span> (<span id="type">u16</span> <span id="v">Idx</span>&lt;<span id="int">256</span>=<span id="int">0</span>;<span id="v">Idx</span>++)<span id="block">{</span>
+&emsp;&emsp;&emsp;<span id="class">For</span> (<span id="type">U16</span> <span id="v">Idx</span>&lt;<span id="int">256</span>=<span id="int">0</span>;<span id="v">Idx</span>++)<span id="block">{</span>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="func">Print</span>(<span id="char">"%dS"</span>,<span id="v">Idx</span>);
 &emsp;&emsp;&emsp;<span id="block">}</span>
 
@@ -144,8 +144,8 @@ HolyFish:
       <p>Loop "While":</p>
 <pre id="code">
 HolyFish:
-&emsp;&emsp;&emsp;<span id="type">f64</span> <span id="v">GoldenRatio</span>=<span id="int">2.0f</span>;
-&emsp;&emsp;&emsp;<span id="class">while</span> (<span id="int">1</span>)<span id="block">{</span>
+&emsp;&emsp;&emsp;<span id="type">F64</span> <span id="v">GoldenRatio</span>=<span id="int">2.0f</span>;
+&emsp;&emsp;&emsp;<span id="class">While</span> (<span id="int">1</span>)<span id="block">{</span>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="v">GoldenRatio</span>=((<span id="int">1.0f</span>/<span id="v">GoldenRatio</span>)+<span id="int">1</span>);
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="func">Print</span>(<span id="char">"%fLL\n"</span>,<span id="v">GoldenRatio</span>);
 &emsp;&emsp;&emsp;<span id="block">}</span>
@@ -154,11 +154,11 @@ HolyFish:
       <p>If:</p>
 <pre id="code">
 HolyFish:
-&emsp;&emsp;&emsp;<span id="class">if</span>(<span id="int">0.1</span>+<span id="int">0.2</span>==<span id="int">0.3</span>)<span id="block">{</span>
+&emsp;&emsp;&emsp;<span id="class">If</span>(<span id="int">0.1</span>+<span id="int">0.2</span>==<span id="int">0.3</span>)<span id="block">{</span>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="char">"True\n"</span>;
-&emsp;&emsp;&emsp;<span id="block">}</span><span id="class">else</span><span id="block">{</span>
+&emsp;&emsp;&emsp;<span id="block">}</span><span id="class">Else</span><span id="block">{</span>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="char">"False\n"</span>;
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="class">if</span>((<span id="type">FP64</span>)<span id="int">0.1</span>+(<span id="type">FP64</span>)<span id="int">0.2</span>==(<span id="type">FP64</span>)<span id="int">0.3</span>)<span id="char"> "But If in FP8~FP64 Its True\n"</span>;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="class">If</span>((<span id="type">FP64</span>)<span id="int">0.1</span>+(<span id="type">FP64</span>)<span id="int">0.2</span>==(<span id="type">FP64</span>)<span id="int">0.3</span>)<span id="char"> "But If in FP8~FP64 Its True\n"</span>;
 &emsp;&emsp;&emsp;<span id="block">}</span>
 
 </pre>
@@ -246,8 +246,8 @@ HolyFish:
       <p>Pointer & Dereference:</p>
 <pre id="code">
 HolyFish:
-&emsp;&emsp;&emsp;<span id="type">u8</span> <span id="v">Value</span> = <span id="int">42</span>;
-&emsp;&emsp;&emsp;<span id="type">u8</span>* <span id="v">Ptr</span> = &<span id="v">Value</span>;
+&emsp;&emsp;&emsp;<span id="type">U8</span> <span id="v">Value</span> = <span id="int">42</span>;
+&emsp;&emsp;&emsp;<span id="type">U8</span>* <span id="v">Ptr</span> = &<span id="v">Value</span>;
 &emsp;&emsp;&emsp;*<span id="v">Ptr</span> = <span id="int">100</span>;
 &emsp;&emsp;&emsp;<span id="func">Print</span>(<span id="char">"%dC\n"</span>, <span id="v">Value</span>);
 
