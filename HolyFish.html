@@ -118,7 +118,12 @@ HolyFish:
 &emsp;&emsp;&emsp;<span id="class">Class </span><span id="block">{</span>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="type">U8</span> <span id="v">X</span>,<span id="v">Y</span>,<span id="v">Z</span>;
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="type">U0</span> (*<span id="v">Draw</span>)(<span id="type">U0</span>);
-&emsp;&emsp;&emsp;<span id="block">} <span id="v">Pos</span>;</span>
+&emsp;&emsp;&emsp;<span id="block">} <span id="v">Pos2D</span>;</span>
+
+&emsp;&emsp;&emsp;<span id="class">Class </span><span id="block">{</span>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="type">U8</span> <span id="v">X</span>,<span id="v">Y</span>,<span id="v">Z</span>;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="type">U0</span> (*<span id="v">Draw</span>)(<span id="type">U0</span>);
+&emsp;&emsp;&emsp;<span id="block">} <span id="v">Pos3D</span> : <span id="v">Pos2D</span>;</span>
 
 </pre>
       <p>Define:</p>
@@ -168,7 +173,19 @@ Output:
 &emsp;&emsp;&emsp;But If in FP8~FP64 Its True
 
 </pre>
+</pre>
+      <p>enum:</p>
+<pre id="code">
+HolyFish:
+&emsp;&emsp;&emsp;<span id="class">Typedef</span> (<span id="type">U8</span>)<span id="class">Enum</span> <span id="block">{</span>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="v">USE_BASE_RATE</span>=<span id="int">0b000</span>,
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="v">USE_MUL_2</span>=<span id="int">0b001</span>,
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="v">USE_MUL_3</span>=<span id="int">0b010</span>,
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="v">USE_MUL_4</span>=<span id="int">0b011</span>,
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="v">USE_BASE_RATE</span>=<span id="int">0b100</span>:<span id="int">0b111</span>
+&emsp;&emsp;&emsp;<span id="block">}</span> <span id="v">HDAudioRateMul</span>;
 
+</pre>
       <p style="color: red;">No switch case.</p><br>
       <p>Print:</p>
       <p>&emsp;&emsp;&emsp;<span id="char">%u(x)</span> <span id="commit">// Unsigned Integer (x)=Type</span></p>
